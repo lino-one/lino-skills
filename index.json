@@ -1,11 +1,13 @@
 [
   {
     "id": "knowledge-alchemy",
-    "name": "Knowledge Alchemy",
-    "description": "把笔记变成元素组合游戏，好奇心驱动复习",
+    "name": "🧪 Knowledge Alchemy — 炼金术式复习法",
+    "description": "把笔记内容转成元素组合游戏。不用答题，靠试配方式解锁概念——好奇心驱动复习。",
     "trigger": "用户说\"好无聊不想复习\"、\"做成游戏\"、\"炼金术\"、\"alchemy\"、\"做点好玩的\"",
     "author": "chriswu",
     "hasReferences": true,
-    "references": ["genai-alchemy.html"]
+    "references": [
+      "genai-alchemy.html"
+    ]
   }
 ]
