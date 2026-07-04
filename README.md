@@ -26,7 +26,8 @@ index.json                # Generated — do not edit by hand
 name: My Skill
 description: One-line summary shown in search results
 trigger: When the agent should use this skill (short phrases users might say)
-author: your-github-handle
+author: original-creator-handle
+source: https://github.com/original-creator/their-repo   # optional, for ported skills
 visibility: public
 ---
 
@@ -34,6 +35,8 @@ visibility: public
 ```
 
 All four of `name`, `description`, `trigger`, `author` are required. `visibility` must be `public` for community skills.
+
+`author` credits the **original creator** of the skill, not whoever opens the PR — submitters are already recorded in git history. When porting a skill from elsewhere, keep the original author, add `source` pointing to the upstream repo, and make sure the license permits redistribution.
 
 ## Install a Skill
 
