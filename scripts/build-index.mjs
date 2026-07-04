@@ -67,6 +67,8 @@ for (const id of readdirSync(skillsDir).sort()) {
     description: meta.description ?? '',
     trigger: meta.trigger ?? '',
     author: meta.author ?? '',
+    ...(meta.submitted_by ? { submittedBy: meta.submitted_by } : {}),
+    ...(meta.source ? { source: meta.source } : {}),
     hasReferences: references.length > 0,
     references,
   });

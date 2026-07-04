@@ -27,6 +27,7 @@ name: My Skill
 description: One-line summary shown in search results
 trigger: When the agent should use this skill (short phrases users might say)
 author: original-creator-handle
+submitted_by: your-github-handle                         # optional, if you are not the author
 source: https://github.com/original-creator/their-repo   # optional, for ported skills
 visibility: public
 ---
