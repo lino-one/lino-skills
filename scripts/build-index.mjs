@@ -12,7 +12,8 @@ const skillsDir = join(root, 'skills');
 const checkOnly = process.argv.includes('--check');
 
 const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
-const REQUIRED_FIELDS = ['name', 'description', 'trigger', 'author'];
+const REQUIRED_FIELDS = ['name', 'description', 'trigger', 'author', 'version'];
+const SEMVER_RE = /^\d+\.\d+\.\d+$/;
 
 function parseFrontmatter(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
@@ -50,6 +51,9 @@ for (const id of readdirSync(skillsDir).sort()) {
   for (const field of REQUIRED_FIELDS) {
     if (!meta[field]) fail(`frontmatter missing required field "${field}"`);
   }
+  if (meta.version && !SEMVER_RE.test(meta.version)) {
+    fail(`version must be semver (major.minor.patch), got "${meta.version}"`);
+  }
   if (meta.visibility && meta.visibility !== 'public') {
     fail(`visibility must be "public" for community skills (got "${meta.visibility}")`);
   }
@@ -67,6 +71,8 @@ for (const id of readdirSync(skillsDir).sort()) {
     description: meta.description ?? '',
     trigger: meta.trigger ?? '',
     author: meta.author ?? '',
+    version: meta.version ?? '0.0.0',
+    ...(meta.tags ? { tags: meta.tags.split(',').map((t) => t.trim()).filter(Boolean) } : {}),
     ...(meta.submitted_by ? { submittedBy: meta.submitted_by } : {}),
     ...(meta.source ? { source: meta.source } : {}),
     hasReferences: references.length > 0,
