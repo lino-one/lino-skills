@@ -23,7 +23,7 @@ index.json                # Generated — do not edit by hand
 
 ```yaml
 ---
-name: My Skill
+name: my-skill        # MUST equal the folder name (Claude Code convention)
 description: One-line summary shown in search results
 trigger: When the agent should use this skill (short phrases users might say)
 author: original-creator-handle
@@ -37,7 +37,7 @@ visibility: public
 (Method body in markdown — the agent reads this to learn how to apply the skill)
 ```
 
-`name`, `description`, `trigger`, `author`, and `version` are required. `visibility` must be `public` for community skills. Bump `version` in every PR that changes the skill — installed copies use it to detect available updates.
+`name`, `description`, `trigger`, `author`, and `version` are required. `name` must equal the folder name (lowercase-hyphen, same rule as Claude Code skills) — put the human-readable title in the body's `#` heading instead. `visibility` must be `public` for community skills. Bump `version` in every PR that changes the skill — installed copies use it to detect available updates.
 
 `author` credits the **original creator** of the skill, not whoever opens the PR — submitters are already recorded in git history. When porting a skill from elsewhere, keep the original author, add `source` pointing to the upstream repo, and make sure the license permits redistribution.
 
