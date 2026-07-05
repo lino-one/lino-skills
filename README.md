@@ -41,6 +41,10 @@ visibility: public
 
 `author` credits the **original creator** of the skill, not whoever opens the PR — submitters are already recorded in git history. When porting a skill from elsewhere, keep the original author, add `source` pointing to the upstream repo, and make sure the license permits redistribution.
 
+### Lino-specific skills
+
+Skills that depend on Lino features — e.g. they bundle a Spark HTML reference — must carry a `lino` or `spark` marker in their id (e.g. `lino-spark-drum-kit`), so users of other ecosystems can tell at a glance the skill won't fully work outside Lino.
+
 ## Extra Files (manifest.json)
 
 By default only `SKILL.md` and flat files under `references/` are installed. If your skill ships more (subdirectories, templates, data), add a `manifest.json` next to SKILL.md:
