@@ -41,6 +41,16 @@ visibility: public
 
 `author` credits the **original creator** of the skill, not whoever opens the PR — submitters are already recorded in git history. When porting a skill from elsewhere, keep the original author, add `source` pointing to the upstream repo, and make sure the license permits redistribution.
 
+## Extra Files (manifest.json)
+
+By default only `SKILL.md` and flat files under `references/` are installed. If your skill ships more (subdirectories, templates, data), add a `manifest.json` next to SKILL.md:
+
+```json
+{ "files": ["references/*", "template-pack/**"] }
+```
+
+`*` matches within a path segment, `**` matches across segments. CI expands the globs into a concrete file list in `index.json`; the installer downloads exactly that list.
+
 ## Install a Skill
 
 In Lino, ask the agent to search community skills, or copy any skill folder into `~/.lino/skills/` and restart Lino. The agent discovers it automatically.
