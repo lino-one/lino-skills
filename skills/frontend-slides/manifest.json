@@ -1,6 +1,7 @@
 {
   "files": [
     "references/*",
-    "bold-template-pack/**"
+    "bold-template-pack/**",
+    "scripts/*"
   ]
 }

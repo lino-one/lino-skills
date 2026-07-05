@@ -96,7 +96,10 @@
       "references/STYLE_PRESETS.md",
       "references/animation-patterns.md",
       "references/html-template.md",
-      "references/viewport-base.css"
+      "references/viewport-base.css",
+      "scripts/deploy.sh",
+      "scripts/export-pdf.sh",
+      "scripts/extract-pptx.py"
     ]
   }
 ]
