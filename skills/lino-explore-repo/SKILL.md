@@ -3,7 +3,7 @@ name: lino-explore-repo
 description: Explore a bound local folder — a code repository, a document vault, or a mix of both — and propose a set of cards that map it. Use when asked to explore, map, onboard, survey, or make cards from a folder attached to this conversation.
 trigger: "explore this repo"、"map this folder"、"onboard me to this codebase"、"survey these notes"、"探索这个仓库"、"梳理一下这个文件夹"
 author: lino
-version: 2.0.0
+version: 2.2.0
 visibility: public
 ---
 
@@ -78,10 +78,10 @@ Each body, in this order:
 - **Key files** — link each one.
 - **Unclear** — omit the heading if nothing is.
 
-**The units you named in §2 are this survey's Concept Cards** — an app, a
-package, a service, a topic folder. That is what lets the rest of the cards
-refer to them by name. Everything else here is a Plain Card: the overview, a
-walkthrough, Open questions.
+**The units you named in §2 are what the rest of the cards refer to by name.**
+Whether any of them takes a Concept is not this survey's question — `Writing a
+Card` already answers it, and answering it twice is how the two came to
+disagree.
 
 One card is **Open questions**: what you did not look at, and what a second pass
 would cover. On a first pass there is always something.
