@@ -3,7 +3,7 @@ name: lino-explore-repo
 description: Explore a bound local folder — a code repository, a document vault, or a mix of both — and propose a set of cards that map it. Use when asked to explore, map, onboard, survey, or make cards from a folder attached to this conversation.
 trigger: "explore this repo"、"map this folder"、"onboard me to this codebase"、"survey these notes"、"探索这个仓库"、"梳理一下这个文件夹"
 author: lino
-version: 2.1.0
+version: 2.2.0
 visibility: public
 ---
 
