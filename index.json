@@ -111,5 +111,15 @@
     "version": "3.0.0",
     "hasReferences": false,
     "references": []
+  },
+  {
+    "id": "lino-skill-creator",
+    "name": "lino-skill-creator",
+    "description": "Write a new Lino skill or revise an existing one — its folder, its frontmatter, its body, and the judgement of what belongs in a skill versus in the base instructions. Use when asked to create, draft, improve, or fix a skill; not for using a skill that already exists.",
+    "trigger": "\"写一个 skill\"、\"做个技能\"、\"create a skill\"、\"write a skill\"、\"improve this skill\"、\"新建技能\"、\"改一下这个 skill\"",
+    "author": "lino",
+    "version": "1.1.0",
+    "hasReferences": false,
+    "references": []
   }
 ]
