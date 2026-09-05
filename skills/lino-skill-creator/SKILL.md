@@ -3,7 +3,7 @@ name: lino-skill-creator
 description: Write a new Lino skill or revise an existing one — its folder, its frontmatter, its body, and the judgement of what belongs in a skill versus in the base instructions. Use when asked to create, draft, improve, or fix a skill; not for using a skill that already exists.
 trigger: "写一个 skill"、"做个技能"、"create a skill"、"write a skill"、"improve this skill"、"新建技能"、"改一下这个 skill"
 author: lino
-version: 1.1.0
+version: 1.2.0
 visibility: public
 ---
 
@@ -90,14 +90,15 @@ the work needs, not documentation about itself.
 Link each reference from `SKILL.md` and say when it should be read. Keep each
 fact in one place instead of repeating it in the entrypoint.
 
-A reference is reached two ways, and they are for different jobs: call `skill`
-again with the **same name** and that file's skill-relative path, or `read` the
-absolute path — the skills list gives each entry a short path and expands it in
-the roots table at the end. Use `skill` for a whole file, `read` when you want
-part of one.
+**A reference nobody links is a reference nobody reads.** Whoever follows this
+skill opens the files its instructions send them to, and no others — so a file
+that is never named is a file that was never written. Name it where the work
+that needs it is described, not in a list at the end.
 
-Either way, read only the ones the instructions send you to. Do not read the
-whole folder because it is there.
+How a reference gets opened is not this skill's business, and not yours to
+explain in the one you are writing: it is the same for every skill, so it lives
+in the base instructions. A skill that teaches it is a skill copying the base,
+which is what §1's second row is about.
 
 ## 6. Getting it onto a machine
 
