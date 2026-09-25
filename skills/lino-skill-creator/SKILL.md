@@ -110,8 +110,11 @@ skill says. The list is rescanned at the start of every turn, so a skill created
 now is available now — its `/name` included. No restart, and nothing to hand over.
 
 **Installing someone else's skill is not writing one.** Nothing in §4 applies to
-it: you do not cut it, tighten it or adapt it — you copy it. Changing it is a
-separate request, made after it is installed, as it was written.
+it: you do not cut it, tighten it or adapt it — you copy it. Copying means
+downloading its files unchanged, the way the base instructions say (one command
+outside the sandbox, which the user approves), never retyping them with `write`:
+a skill typed out is a skill with mistakes in it. Changing it is a separate
+request, made after it is installed, as it was written.
 
 Two other routes, for different reasons:
 
@@ -123,9 +126,10 @@ Two other routes, for different reasons:
 - **Finder** — Settings opens the skills folder, for someone who would rather
   edit it themselves.
 
-Do not use `bash` to move a skill folder around when `write` will do. A file
-each is legible in the turn's record; a shell one-liner that creates four is one
-row saying `bash`.
+When you are the one writing a skill, use `write`, not `bash`. A file each is
+legible in the turn's record and is shown to the user before it lands; a shell
+one-liner that creates four is one row saying `bash` — and a command in the
+sandbox cannot write to the skills folder anyway.
 
 ## 7. Check it
 
